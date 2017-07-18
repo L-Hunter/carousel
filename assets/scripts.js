@@ -3,7 +3,7 @@ var display = document.getElementById("display");
 var backward = document.getElementById("backward");
 var forward = document.getElementById("forward");
 var count = 0;
-var pictures = ['assets/images/beach.jpg', 'assets/images/grass.jpg','assets/images/snowyforest.jpg']
+var pictures = ['assets/images/beach.jpg', 'assets/images/grass.jpg','assets/images/snowyforest.jpg', 'assets/images/ozarks.jpg', 'assets/images/nasa.jpg'];
 
 backward.addEventListener("click", previous);
 forward.addEventListener("click", next)
@@ -11,6 +11,8 @@ forward.addEventListener("click", next)
 
 display.style.backgroundImage = "url('" + pictures[count]+ "')";
 
+setInterval(function(){
+	next();}, 5000);
 
 function next(){
 	console.log("show the next picture");
@@ -32,5 +34,3 @@ function previous(){
 	}
 	display.style.backgroundImage = "url('" + pictures[count]+ "')";
 }
-
-//Add a timeout which advances the slides every 5 seconds.
