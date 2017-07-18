@@ -7,9 +7,10 @@ var pictures = ['assets/images/beach.jpg', 'assets/images/grass.jpg','assets/ima
 
 backward.addEventListener("click", previous);
 forward.addEventListener("click", next)
-//Make the transitions smooth using simple effects
 
+display.style.transition = "all 1s"
 display.style.backgroundImage = "url('" + pictures[count]+ "')";
+
 
 setInterval(function(){
 	next();}, 5000);
@@ -24,7 +25,6 @@ function next(){
 	display.style.backgroundImage = "url('" + pictures[count]+ "')";
 }
 
-//Make the transitions smooth using simple effects
 function previous(){
 	console.log("show the previous picture");
 	if (count == 0){
