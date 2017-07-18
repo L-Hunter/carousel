@@ -10,8 +10,8 @@ forward.addEventListener("click", next);
 
 display.style.backgroundImage = "url('" + pictures[count]+ "')";
 
-setInterval(function(){
-	next(); }, 5500);
+setTimeout(function(){
+	next(); }, 3000);
 
 function next(){
 	console.log("show the next picture");
