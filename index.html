@@ -1,13 +1,4 @@
 <!DOCTYPE html>
-<!-- 
-Set up a very wide div which will contain the individual "slides" of each image. By appropriately positioning that div inside a container div (which acts like a picture frame), you can choose which slide is visible at any given time. -->
-<!-- Once you have the slider positioned properly, build functions for "next" and "previous" which will advance to the next or previous slide accordingly. Make the transitions smooth using simple effects.
-Set up arrow buttons which activate those functions and play with cycling through the images.
-Add in some navigation dots at the bottom of the slides. Make a horizontal series of empty circles with CSS immediately below the slideshow. Each circle represents a slide, so whenever a new slide is activated, its corresponding circle gets filled in so you can tell where in the show you are. Make each circle link to that particular slide, so you can click on the circle and it will jump to that slide.
-Add a timeout which advances the slides every 5 seconds. -->
-
-
-<html>
 <head>
 	<title>Image Carousel</title>
 	<link rel="stylesheet" type="text/css" href="assets/style.css">
@@ -20,7 +11,7 @@ Add a timeout which advances the slides every 5 seconds. -->
 <div id="picture-frame">
 
 	<div id="backward" class="screen button"><img src="assets/images/previous.ico"> </div>
-	<div id="display" class="screen"><span id="n0">&#9673;</span><span id="n1">&#9678;</span><span id="n2">&#9678;</span><span id="n3">&#9678;</span><span id="n4">&#9678;</span></div>
+	<div id="display" class="screen"><span id="n0" onclick="selected(0)">&#9673;</span><span id="n1" onclick="selected(1)">&#9678;</span><span id="n2" onclick="selected(2)">&#9678;</span><span id="n3" onclick="selected(3)">&#9678;</span><span id="n4" onclick="selected(4)">&#9678;</span></div>
 	<div id="forward" class="screen button"><img src="assets/images/next.ico"></div>
 </div>
 
